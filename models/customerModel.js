@@ -9,16 +9,22 @@ const customerSchema = new mongoose.Schema({
         type: String,
         unique: true,
     },
-    phoneNumber: {
+    role: {
         type: String,
-        required: true,
+        enum: ["admin", "user"],
+        default: 'user',
     },
-    city: String,
-    country: {
+    active: {
+        type: Boolean,
+        default: true,
+    },
+    photo: {
         type: String,
-        required: true,
-        default: 'Indonesia',
+        default: 'user-default.jpg',
     },
+    password: {
+        type: String,
+    }
 })
 
 const Customer = mongoose.model('Customer', customerSchema)

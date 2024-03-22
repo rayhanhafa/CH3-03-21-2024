@@ -1,0 +1,65 @@
+[
+    {
+        "_id": "65fda56fe30c8fb6000529ce",
+        "name": "Beatriz Collins",
+        "email": "beatrizcollins@rodemco.com",
+        "role": "admin",
+        "active": true,
+        "photo": "user-1.jpg",
+        "password": ""
+    },
+    {
+        "_id": "65fda56f8cc895b37d524ee6",
+        "name": "Myrtle Haynes",
+        "email": "myrtlehaynes@rodemco.com",
+        "role": "user",
+        "active": false,
+        "photo": "user-5.jpg",
+        "password": ""
+    },
+    {
+        "_id": "65fda56f8ae4a20b3f288f5a",
+        "name": "Curtis Avila",
+        "email": "curtisavila@rodemco.com",
+        "role": "admin",
+        "active": false,
+        "photo": "user-1.jpg",
+        "password": ""
+    },
+    {
+        "_id": "65fda56ff7e9b5a7a99f3239",
+        "name": "England Barnett",
+        "email": "englandbarnett@rodemco.com",
+        "role": "admin",
+        "active": true,
+        "photo": "user-4.jpg",
+        "password": ""
+    },
+    {
+        "_id": "65fda56fb421cbaae0a7c7eb",
+        "name": "Willa Garcia",
+        "email": "willagarcia@rodemco.com",
+        "role": "admin",
+        "active": true,
+        "photo": "user-1.jpg",
+        "password": ""
+    },
+    {
+        "_id": "65fda56f56f7f6c903b66906",
+        "name": "Tisha Myers",
+        "email": "tishamyers@rodemco.com",
+        "role": "admin",
+        "active": true,
+        "photo": "user-5.jpg",
+        "password": ""
+    },
+    {
+        "_id": "65fda56f1aad9d84b64366dc",
+        "name": "Duffy Bradford",
+        "email": "duffybradford@rodemco.com",
+        "role": "user",
+        "active": false,
+        "photo": "user-5.jpg",
+        "password": ""
+    }
+]
