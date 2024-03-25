@@ -1,7 +1,18 @@
-require('dotenv/config') //panggil env
+require("dotenv").config();
+const mongoose = require("mongoose");
 const app = require("./app");
 
-const PORT = process.env.PORT; //panggil env yang tidak igin terlihat
+const PORT = process.env.PORT;
+
+const DB = process.env.DATABASE;
+
+mongoose
+  .connect(DB, {
+    useNewUrlParser: true,
+  })
+  .then((con) => {
+    console.log("connection ke database sukses");
+  });
 
 app.listen(PORT, () => {
   console.log(`APP running on port : ${PORT}`);
