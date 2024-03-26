@@ -1,65 +1,79 @@
 [
     {
-        "_id": "65fda56fe30c8fb6000529ce",
-        "name": "Beatriz Collins",
-        "email": "beatrizcollins@rodemco.com",
+        "_id": "6602d4010e8c8e604139fc97",
+        "name": "Ellison Baird",
+        "age": 21,
+        "email": "ellisonbaird@quizka.com",
         "role": "admin",
         "active": true,
-        "photo": "user-1.jpg",
-        "password": ""
+        "photo": "user-3.jpg",
+        "password": "",
+        "createdAt": "2016-11-20T01:19:30"
     },
     {
-        "_id": "65fda56f8cc895b37d524ee6",
-        "name": "Myrtle Haynes",
-        "email": "myrtlehaynes@rodemco.com",
+        "_id": "6602d401f7fbb00d980fef56",
+        "name": "Wood Trujillo",
+        "age": 36,
+        "email": "woodtrujillo@quizka.com",
+        "role": "admin",
+        "active": false,
+        "photo": "user-3.jpg",
+        "password": "",
+        "createdAt": "2016-09-12T12:39:34"
+    },
+    {
+        "_id": "6602d4015b00a956e3c2b22c",
+        "name": "Rosalinda Figueroa",
+        "age": 39,
+        "email": "rosalindafigueroa@quizka.com",
+        "role": "admin",
+        "active": false,
+        "photo": "user-5.jpg",
+        "password": "",
+        "createdAt": "2019-05-28T08:23:05"
+    },
+    {
+        "_id": "6602d4019a6664c73c5cb8eb",
+        "name": "Miranda Rush",
+        "age": 20,
+        "email": "mirandarush@quizka.com",
+        "role": "admin",
+        "active": true,
+        "photo": "user-2.jpg",
+        "password": "",
+        "createdAt": "2021-04-10T12:38:29"
+    },
+    {
+        "_id": "6602d401187aaaaa5d8f2ec4",
+        "name": "Camille Guerra",
+        "age": 30,
+        "email": "camilleguerra@quizka.com",
         "role": "user",
-        "active": false,
-        "photo": "user-5.jpg",
-        "password": ""
-    },
-    {
-        "_id": "65fda56f8ae4a20b3f288f5a",
-        "name": "Curtis Avila",
-        "email": "curtisavila@rodemco.com",
-        "role": "admin",
-        "active": false,
-        "photo": "user-1.jpg",
-        "password": ""
-    },
-    {
-        "_id": "65fda56ff7e9b5a7a99f3239",
-        "name": "England Barnett",
-        "email": "englandbarnett@rodemco.com",
-        "role": "admin",
-        "active": true,
-        "photo": "user-4.jpg",
-        "password": ""
-    },
-    {
-        "_id": "65fda56fb421cbaae0a7c7eb",
-        "name": "Willa Garcia",
-        "email": "willagarcia@rodemco.com",
-        "role": "admin",
         "active": true,
         "photo": "user-1.jpg",
-        "password": ""
+        "password": "",
+        "createdAt": "2014-12-13T05:46:14"
     },
     {
-        "_id": "65fda56f56f7f6c903b66906",
-        "name": "Tisha Myers",
-        "email": "tishamyers@rodemco.com",
-        "role": "admin",
-        "active": true,
-        "photo": "user-5.jpg",
-        "password": ""
-    },
-    {
-        "_id": "65fda56f1aad9d84b64366dc",
-        "name": "Duffy Bradford",
-        "email": "duffybradford@rodemco.com",
+        "_id": "6602d40122fa43a1edaf56c8",
+        "name": "Bush Dalton",
+        "age": 30,
+        "email": "bushdalton@quizka.com",
         "role": "user",
-        "active": false,
+        "active": true,
+        "photo": "user-3.jpg",
+        "password": "",
+        "createdAt": "2020-03-28T10:38:27"
+    },
+    {
+        "_id": "6602d401ba4b14070ff61638",
+        "name": "Manuela Key",
+        "age": 21,
+        "email": "manuelakey@quizka.com",
+        "role": "user",
+        "active": true,
         "photo": "user-5.jpg",
-        "password": ""
+        "password": "",
+        "createdAt": "2023-12-17T10:11:47"
     }
 ]

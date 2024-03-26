@@ -1,16 +1,54 @@
 const fs = require("fs");
-const Customer = require("./../models/customerModel")
+const Customer = require("./../models/customerModel");
+const { query } = require("express");
 
 const getCustomers = async (req, res, next) => {
   try {
+    //1. basic filter di moongose
     const queryObject = { ...req.query }
     const excludeColumn = ['page', 'sort', 'limit', 'field']
-
     excludeColumn.forEach((el) => delete queryObject[el])
 
-    console.log(req.query, queryObject)
+    //2. advance filter
+    // {age :{ $gte: 5}}
+    let queryStr = JSON.stringify(queryObject)
+    queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`) // => $gte , $lte , $gt
+    queryStr = (JSON.parse(queryStr));
 
-    const customers = await Customer.find(queryObject);
+    let query = Customer.find(queryStr);
+
+    //3. sorting
+    //sorting ASCENDING = name, kalau DESCENDING = -name
+    if (req.query.sort) {
+      const sortBy = req.query.sort.split(',').join(' ')
+      console.log(sortBy)
+      query = query.sort(sortBy)
+    } else {
+      query = query.sort('-createdAt')
+    }
+
+    //4. field limiting
+    if (req.query.field) {
+      const field = req.query.field.split(',').join(' ')
+      query = query.select(field);
+    } else {
+      query = query.select('-__v')
+    }
+
+    //5. paggination
+    const page = req.query.page * 1 || 1
+    const limit = req.query.limit * 1 || 2
+    const skip = (page - 1) * limit
+    //page = 3 & limit = 2 ++> data ke 5 dan 6
+    query = query.skip(skip).limit(limit);
+
+    if (req.query.page) {
+      let numCustomers = await Customer.countDocuments()
+      if (skip > numCustomers) throw new Error("Page does not exist!")
+    }
+
+    //4. esksekusi query
+    const customers = await query
 
     res.status(200).json({
       status: "success",
@@ -19,6 +57,7 @@ const getCustomers = async (req, res, next) => {
       data: {
         customers,
       },
+      page: page,
     });
   } catch (err) {
     res.status(400).json({
